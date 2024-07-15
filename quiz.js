@@ -1,5 +1,4 @@
-function checkAnswer(event) {
-  event.preventDefault();
+function checkAnswer() {
   let correctAnswer = "4";
 
   let quizValue = document.querySelector('[name="quiz"]:checked');
