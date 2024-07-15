@@ -5,7 +5,7 @@ function checkAnswer() {
   let userAnswer = quizValue.value;
   let textDisplay = document.querySelector("#feedback ");
 
-  if (correctAnswer === userAnswer) {
+  if (userAnswer === correctAnswer) {
     textDisplay.textContent = "Correct! Well done.";
   } else {
     textDisplay.textContent = "That's incorrect. Try again!";
