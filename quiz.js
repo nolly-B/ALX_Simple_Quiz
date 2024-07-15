@@ -1,13 +1,15 @@
-function checkAnswer() {
+function checkAnswer(event) {
+  event.preventDefault();
   let correctAnswer = "4";
-  let quizValue = document.querySelector('input[name="quiz"]');
-  let userAnswer = quizValue.value;
-  let textContent = document.querySelector("#feedback ");
 
-  if (correctAnswer === userAnswer) {
-    return (textContent.innerHTML = "Correct! Well done.");
+  let quizValue = document.querySelector('[name="quiz"]:checked');
+  let userAnswer = quizValue.value;
+  let textDisplay = document.querySelector("#feedback ");
+
+  if (correctAnswer == userAnswer) {
+    textDisplay.textContent = "Correct! Well done.";
   } else {
-    return (textContent.innerHTML = "That's incorrect. Try again!");
+    textDisplay.textContent = "That's incorrect. Try again!";
   }
 }
 let submitAnswer = document.getElementById("submit-answer");
